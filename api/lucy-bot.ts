@@ -27,6 +27,7 @@ bot.on('new_chat_members', async (ctx: ContextMessageUpdate) => {
 });
 
 bot.command('DevTalks', async (ctx: ContextMessageUpdate) => {
+  ctx.reply("hello");
   const octokit = new Octokit();
   const { data } = await octokit.issues.listForRepo({
     owner: 'COPS-IITBHU',
