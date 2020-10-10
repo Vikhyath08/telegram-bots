@@ -10,7 +10,7 @@ if (!PROD_ENV) {
   require('dotenv').config();
 }
 
-const bot = new Telegraf(process.env.LUCY_BOT_TOKEN || '');
+const bot = new Telegraf(process.env.HEX_BOT_TOKEN || '');
 
 bot.use(async (ctx: ContextMessageUpdate, next) => {
   const start = new Date();
