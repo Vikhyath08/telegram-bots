@@ -16,7 +16,7 @@
   "delay": "2000",
   "ext": "js,ts,json",
   "env": {
-    "LUCY_BOT_TOKEN": "set",
+    "HEX_BOT_TOKEN": "set",
     "CHATID": "set",
     "PASSWORD": "set"
   }
