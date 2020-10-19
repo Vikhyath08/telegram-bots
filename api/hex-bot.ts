@@ -25,7 +25,16 @@ bot.on('new_chat_members', async (ctx: ContextMessageUpdate) => {
   const name = ctx.from ? ctx.from.first_name : 'fellow nerd';
   ctx.reply(`Hey ${name}! I'm really interested in you, so can you please introduce yourself?`);
 });
-
+bot.command('AddIssue',async (ctx: ContextMessageUpdate) =>{
+  const octokit = new Octokit();
+  octokit.issues.create({
+    owner: 'hex-plex',
+    repo: 'TorPi',
+    title: 'Issue Bot'
+  });
+  setTimeout(()=>{},2000);
+  ctx.reply("Done");
+});
 bot.command('DevTalks', async (ctx: ContextMessageUpdate) => {
   //ctx.reply("hello");
   const octokit = new Octokit();
