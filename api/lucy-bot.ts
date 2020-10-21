@@ -33,15 +33,15 @@ bot.command('DevTalks', async (ctx: ContextMessageUpdate) => {
     ctx.reply('No upcoming dev talks.');
   }
 
-  if (data.length != 0){
-    ctx.reply('There are upcoming dev talks');
-  }
+  // if (data.length != 0){
+  //   ctx.reply('There are upcoming dev talks');
+  // }
 
   const msgList = data.map(
     (element) => `[${element.title}](${element.html_url}) by [${element.user.login}](${element.user.html_url})`,
   );
 
-  ctx.replyWithMarkdown(msgList.join('\n\n'), <ExtraEditMessage>Extra.webPreview(false));
+  ctx.replyWithMarkdown('There are upcoming Dev Talks\n\n' + msgList.join('\n\n'), <ExtraEditMessage>Extra.webPreview(false));
 });
 
 if (!PROD_ENV) {
