@@ -33,6 +33,10 @@ bot.command('DevTalks', async (ctx: ContextMessageUpdate) => {
     ctx.reply('No upcoming dev talks.');
   }
 
+  if (data.length != 0){
+    ctx.reply('There are upcoming dev talks');
+  }
+
   const msgList = data.map(
     (element) => `[${element.title}](${element.html_url}) by [${element.user.login}](${element.user.html_url})`,
   );
