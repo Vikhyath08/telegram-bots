@@ -25,5 +25,5 @@ module.exports = async (req: NowRequest  , res: NowResponse): Promise<NowRespons
 
     return res.status(200).send('success');
   }
-  return res.status(200).send('Invalid Password!');
+  return res.status(200).send('Invalid Password');
 };

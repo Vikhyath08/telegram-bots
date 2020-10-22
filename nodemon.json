@@ -16,8 +16,9 @@
   "delay": "2000",
   "ext": "js,ts,json",
   "env": {
-    "HEX_BOT_TOKEN": "894267559:AAHVBGTvIdZLLJOiZXpFiyPyEIEe5Yeztw0",
+    "HEX_BOT_TOKEN": "set",
     "CHATID": "set",
-    "PASSWORD": "set"
+    "PASSWORD": "set",
+    "HEXIE_BOT_LINK":"set",
   }
 }
