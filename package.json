@@ -3,7 +3,7 @@
   "scripts": {
     "lint": "eslint 'api/**/*.ts'",
     "typescript": "tsc --skipLibCheck",
-    "lucy-bot": "nodemon --exec ts-node api/lucy-bot.ts"
+    "hex-bot": "nodemon --exec ts-node api/hex-bot.ts"
   },
   "engines": {
     "node": "12"

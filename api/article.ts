@@ -3,7 +3,7 @@ import { ExtraEditMessage } from 'telegraf/typings/telegram-types';
 import Telegraf, { ContextMessageUpdate, Extra } from 'telegraf';
 import { NowRequest, NowResponse } from '@now/node';
 
-const bot = new Telegraf(process.env.LUCY_BOT_TOKEN || '');
+const bot = new Telegraf(process.env.HEX_BOT_TOKEN || '');
 
 bot.use(Telegraf.log());
 bot.use(async (ctx: ContextMessageUpdate, next) => {
