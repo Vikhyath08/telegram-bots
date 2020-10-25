@@ -4,8 +4,8 @@ import Telegraf, { ContextMessageUpdate, Extra} from 'telegraf';
 import { ExtraEditMessage } from 'telegraf/typings/telegram-types';
 // import axios from 'axios';
 const fs = require('fs');
-import * as WizardScene  from 'telegraf/scenes/wizard';
-import * as Stage from 'telegraf/stage';
+const WizardScene = require('telegraf/scenes/wizard');
+const Stage = require('telegraf/stage');
 const session = require('telegraf/session');
 var talk = {};
 
