@@ -170,30 +170,32 @@ bot.command('leave', Stage.leave('talk_info'));
       });
       
       bot.command('AddMe',async (ctx: ContextMessageUpdate) => {
-        if(ctx.message && ctx.message.text){
-          const parts = regex.exec(ctx.message.text.trim());
-          if (parts) {
-            const command = {
-              text: ctx.message.text,
-        command: parts[1],
-        bot: parts[2],
-        args: parts[3],
-      };
-      var rawData = fs.readFileSync(__dirname + '/members.json');
-      var memberData = JSON.parse(rawData);
-      memberData[ctx.from!.first_name]=command.args;
-      fs.writeFile('members.json',
-      JSON.stringify(memberData),
-      (err) => {
-        if(err){
-          console.log("Error not saved");
-        }
-      }
-      );
-      // In place of text fetch github profile and present
-      await bot.telegram.sendMessage(ctx.from!.id,'text',{reply_to_message_id: ctx.message.message_id});
-    }
-  }
+        ctx.reply('Lol');
+        return;
+  //       if(ctx.message && ctx.message.text){
+  //         const parts = regex.exec(ctx.message.text.trim());
+  //         if (parts) {
+  //           const command = {
+  //             text: ctx.message.text,
+  //       command: parts[1],
+  //       bot: parts[2],
+  //       args: parts[3],
+  //     };
+  //     var rawData = fs.readFileSync(__dirname + '/members.json');
+  //     var memberData = JSON.parse(rawData);
+  //     memberData[ctx.from!.first_name]=command.args;
+  //     fs.writeFile('members.json',
+  //     JSON.stringify(memberData),
+  //     (err) => {
+  //       if(err){
+  //         console.log("Error not saved");
+  //       }
+  //     }
+  //     );
+  //     // In place of text fetch github profile and present
+  //     await bot.telegram.sendMessage(ctx.from!.id,'text',{reply_to_message_id: ctx.message.message_id});
+  //   }
+  // }
 });
 
 bot.command('DevTalks', async (ctx: ContextMessageUpdate) => {
