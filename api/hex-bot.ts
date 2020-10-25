@@ -6,7 +6,7 @@ import { ExtraEditMessage } from 'telegraf/typings/telegram-types';
 const fs = require('fs');
 import * as WizardScene  from 'telegraf/scenes/wizard';
 import * as Stage from 'telegraf/stage';
-import  * as session from 'telegraf/session';
+const session = require('telegraf/session');
 var talk = {};
 
 const PROD_ENV = process.env.NODE_ENV === 'production';
