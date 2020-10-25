@@ -18,7 +18,7 @@ const talkInfoWizard = new WizardScene('talk_info',
     console.log(process.cwd())
     talk = {};
     if(ctx.from!.first_name){
-      var rawData = fs.readFileSync('./members.json');
+      var rawData = fs.readFileSync(__dirname + '/members.json');
       var memberData = JSON.parse(rawData);
       const git_id = memberData[(ctx.from!.first_name)];
       if(git_id){
