@@ -179,7 +179,7 @@ bot.command('leave', Stage.leave('talk_info'));
         bot: parts[2],
         args: parts[3],
       };
-      var rawData = fs.readFileSync('members.json');
+      var rawData = fs.readFileSync(__dirname + '/members.json');
       var memberData = JSON.parse(rawData);
       memberData[ctx.from!.first_name]=command.args;
       fs.writeFile('members.json',
@@ -217,7 +217,7 @@ bot.command('DevTalks', async (ctx: ContextMessageUpdate) => {
   });
   
   bot.on('text', ctx => ctx.reply('This command is not supported 😅.'));
-  
+
   if (!PROD_ENV) {
     bot.launch();
   }
