@@ -4,9 +4,9 @@ import Telegraf, { ContextMessageUpdate, Extra} from 'telegraf';
 import { ExtraEditMessage } from 'telegraf/typings/telegram-types';
 // import axios from 'axios';
 const fs = require('fs');
-import WizardScene  from 'telegraf/scenes/wizard';
-import Stage from 'telegraf/stage';
-import session from 'telegraf/session';
+import * as WizardScene  from 'telegraf/scenes/wizard';
+import * as Stage from 'telegraf/stage';
+import  * as session from 'telegraf/session';
 var talk = {};
 
 const PROD_ENV = process.env.NODE_ENV === 'production';
