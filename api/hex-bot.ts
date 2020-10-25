@@ -67,7 +67,6 @@ const talkInfoWizard = new WizardScene('talk_info',
     if (level != '0' && level != '1' && level != '2')
     {
       ctx.reply('The level has to be one of 0, 1, 2. Enter it again.')
-      console.log(ctx.wizard.cursor)
       ctx.wizard.selectStep(ctx.wizard.cursor)
     }
     else{
@@ -96,8 +95,10 @@ const talkInfoWizard = new WizardScene('talk_info',
     for (let key in talk){
       talkInfo += key + ':' + talk[key] + '\n';
     }
-    ctx.reply(talkInfo)
-    ctx.reply('Awesome. That should be it for now. Thanks for using the bot!');
+    ctx.reply(talkInfo).then(()=>
+    {
+      ctx.reply('Awesome. That should be it for now. Thanks for using the bot!');
+    })
     return ctx.scene.leave();
   },
 );
