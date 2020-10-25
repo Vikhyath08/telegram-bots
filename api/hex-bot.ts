@@ -97,7 +97,7 @@ const talkInfoWizard = new WizardScene('talk_info',
     }
     ctx.reply(talkInfo).then(()=>
     {
-      ctx.reply('Awesome. That should be it for now. Thanks for using the bot!');
+      return ctx.reply('Awesome. That should be it for now. Thanks for using the bot!');
     })
     return ctx.scene.leave();
   },
