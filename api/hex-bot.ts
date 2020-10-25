@@ -16,22 +16,22 @@ bot.use(session())
 const talkInfoWizard = new WizardScene('talk_info', 
   (ctx) => {
     talk = {};
-    // if(ctx.from!.first_name){
-    //   var rawData = fs.readFileSync('members.json');
-    //   var memberData = JSON.parse(rawData);
-    //   const git_id = memberData[(ctx.from!.first_name)];
-      // if(git_id){
+    if(ctx.from!.first_name){
+      var rawData = fs.readFileSync('../members.json');
+      var memberData = JSON.parse(rawData);
+      const git_id = memberData[(ctx.from!.first_name)];
+      if(git_id){
         ctx.reply('Awesome. Awesome. What would your DevTalk\'s name be? This field in compulsory.')
         return ctx.wizard.next();
-      // }
-      // else{
-      //   ctx.reply('Register Yourself by /AddMe <your-github_id>');
-      //   return ctx.scene.leave();
-      // }
-    // }
-    // else{
-    //   ctx.reply('Hello fellow nerd, you have no name!!');
-    // }
+      }
+      else{
+        ctx.reply('Register Yourself by /AddMe <your-github_id>');
+        return ctx.scene.leave();
+      }
+    }
+    else{
+      ctx.reply('Hello fellow nerd, you have no name!!');
+    }
   },
   (ctx) => {
     talk['title'] = ctx.message!.text!;
