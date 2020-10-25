@@ -12,7 +12,8 @@
   "dependencies": {
     "@octokit/rest": "^18.0.6",
     "axios": "^0.20.0",
-    "telegraf": "^3.32.0"
+    "telegraf": "^3.32.0",
+    "telegraf-flow": "^8.3.0"
   },
   "devDependencies": {
     "@now/node": "^0.12.6",
