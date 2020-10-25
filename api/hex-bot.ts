@@ -15,7 +15,7 @@ bot.use(session())
 
 const talkInfoWizard = new WizardScene('talk_info', 
   (ctx) => {
-    console.log('')
+    console.log(process.cwd())
     talk = {};
     if(ctx.from!.first_name){
       var rawData = fs.readFileSync('./members.json');
