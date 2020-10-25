@@ -95,10 +95,7 @@ const talkInfoWizard = new WizardScene('talk_info',
     for (let key in talk){
       talkInfo += key + ':' + talk[key] + '\n';
     }
-    ctx.reply(talkInfo).then(()=>
-    {
-      return ctx.reply('Awesome. That should be it for now. Thanks for using the bot!');
-    })
+    ctx.reply(talkInfo + '\n\nAwesome. That should be it for now. Thanks for using the bot!')
     return ctx.scene.leave();
   },
 );
